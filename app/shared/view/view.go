@@ -8,7 +8,7 @@ import (
 
 var (
 	extensionFile = ".html"
-	rootPath      = "/Users/blythe/Dropbox/Repository/Golang/Technicle/public/"
+	rootPath      = "/Users/blythe/Dropbox/Repository/Golang/Moon/public/"
 )
 
 type View struct {

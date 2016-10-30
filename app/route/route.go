@@ -13,6 +13,7 @@ func Load() *httprouter.Router {
 	r.GET("/home", controller.Home)
 	r.GET("/hello", controller.Hello)
 	r.GET("/hello/:name", controller.Hello)
+	r.POST("/blog/new", controller.Post)
 
 	return r
 }

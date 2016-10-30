@@ -1,6 +1,7 @@
 package controller
 
 import (
+	m "../model"
 	"../shared/view"
 	"github.com/julienschmidt/httprouter"
 	"net/http"
@@ -27,5 +28,14 @@ func Hello(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 
 	// v.Vars = Model{Name: ps.ByName("name")}
 	v.Vars = Model{Name: r.FormValue("name")}
+	v.Render(w)
+}
+
+func Post(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
+	v := view.New(r)
+	v.Name = "new"
+	v.Folder = "blog/new"
+
+	v.Vars = m.Post{Author: r.FormValue("name")}
 	v.Render(w)
 }
