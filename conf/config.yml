@@ -1,0 +1,10 @@
+# This configuration file for web application
+
+# Web application name
+Name: Moon
+
+# Defual Environment
+Env:
+  Extension: html
+  RootPath: /Users/blythe/Dropbox/Repository/Golang/Moon/public/
+
